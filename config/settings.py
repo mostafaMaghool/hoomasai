@@ -71,9 +71,6 @@ TEMPLATES = [
                 'post.context_processors.recent_posts'
             ],
         },
-        "django": {
-            "settingsFile": "Hoomas/settings.py"
-        },
     },
 ]
 
