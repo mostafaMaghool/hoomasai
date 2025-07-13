@@ -1,104 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>گردونه جوایز هوش مصنوعی - Monteno</title>
-    <link rel="stylesheet" href="../static/app/css/gardoon.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">🤖 Monteno AI</div>
-                <ul class="nav-links">
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#prizes">جوایز</a></li>
-                    <li><a href="#about">درباره</a></li>
-                    <li><a href="#contact">تماس</a></li>
-                </ul>
-                <a href="#" class="join-btn">پیوستن</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="sparkle">🎯 گردونه جوایز هوش مصنوعی</h1>
-            <p>شانس خود را امتحان کنید و جوایز فوق‌العاده AI را برنده شوید!</p>
-        </div>
-    </section>
-
-    <!-- Wheel Section -->
-    <section class="wheel-section">
-        <div class="wheel-container">
-            <div class="wheel-outer-ring"></div>
-            <div class="canvas-container">
-                <canvas id="wheel" width="420" height="420"></canvas>
-                <div class="wheel-center"></div>
-            </div>
-            <div class="wheel-pointer-container">
-                <div class="wheel-pointer"></div>
-            </div>
-            <div class="wheel-lights" id="wheelLights"></div>
-            <button class="spin-btn" id="spinBtn">🎲 چرخاندن گردونه</button>
-        </div>
-
-        <div class="prize-info">
-            <h2>🏆 جوایز شگفت‌انگیز</h2>
-            <ul class="prize-list">
-                <li>🎫 کد تخفیف 50% برای تمام محصولات AI</li>
-                <li>🤖 دسترسی رایگان به ابزارهای هوش مصنوعی</li>
-                <li>📚 دوره کامل آموزش Machine Learning</li>
-                <li>💬 جلسه مشاوره رایگان با متخصصان</li>
-                <li>💰 5 میلیون ریال تخفیف دوره آموزشی هومص</li>
-                <li>🎨 قالب‌های اختصاصی طراحی شده با AI</li>
-                <li>🌐 اشتراک یک ساله ChatGPT</li>
-                <li>⭐ اکانت پرو یک ساله</li>
-            </ul>
-            <p>هر روز فقط یک بار می‌توانید شانس خود را امتحان کنید!</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>🚀 چرا هوش مصنوعی ما؟</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>هوش مصنوعی پیشرفته</h3>
-                    <p>از جدیدترین تکنولوژی‌های AI برای بهترین نتایج استفاده می‌کنیم</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>سرعت بالا</h3>
-                    <p>پردازش فوق‌سریع و نتایج آنی برای تمام نیازهای شما</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>دقت بالا</h3>
-                    <p>الگوریتم‌های بهینه‌شده برای دقیق‌ترین نتایج ممکن</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💎</div>
-                    <h3>کیفیت پریمیوم</h3>
-                    <p>محصولات و خدمات با کیفیت حرفه‌ای و استاندارد بین‌المللی</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Result Modal -->
-    <div class="result-modal" id="resultModal">
-        <div class="result-content">
-            <h3>🎉 تبریک! شما برنده شدید!</h3>
-            <div id="prizeResult"></div>
-            <button class="close-btn" onclick="closeModal()">بستن</button>
-        </div>
-    </div>
-<script src="../static/app/js/gardoon.js"></script>
-</body>
-</html>
