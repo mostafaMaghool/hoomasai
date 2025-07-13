@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header %}
+{% endblock header %}
+
+<link type="text/css" href="{% static 'app/css/video/style.css'%}" rel="stylesheet" />
+<!-- <script src="{% static 'app/js/videos/script.js' %}"></script> -->
+
+{% block content%}
+
+    <!-- PageTitle -->
+    <section class="tf-section page-title">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="page-title__body rm">
+                    <div class="block-text pt-12 rtl">
+                        <h2 class="sub-title mb-20">وبلاگ هومص</h2>
+                        <p class="fs-24 mb-33">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم <br> لورم ایپسوم متن ساختگی
+                        </p>
+                    </div>
+                    <img src="{% static 'assets/images/items/group-ntf-02.png'%}" alt="Monteno">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end PageTitle -->
+    <hr>
+    <br><br><br>
+    <!-- Video================================================== -->
+
+    <section class="section-video bg-inverse text-xs-center wp wp-4">
+        <h3 class="sr-only">ویدیو</h3>
+        <video id="demo_video" class="video-js vjs-default-skin vjs-big-play-centered" controls poster="{% static 'assets/images/coverVideo/video-poster.jpg' %}" data-setup='{}'>
+            <source src="{% static 'assets/video/page2.mp4' %}" type='video/mp4'>
+            <source src="{% static 'assets/images/coverVideo/video-poster.jpg' %}" type='video/webm'>
+        </video>
+    </section>
+        <!-- Blog grid -->
+        <section class="blog-grid">
+            <div class="container">
+                <div class="row">
+                    <h3 class="fs-36">
+                            <div class="text-center">
+                                <p><strong>تعداد کل مقالات: {{ total_posts }}</strong></p>
+                            </div>
+                    </h3>
+                        
+                    {% for post in post_list %}
+                        <div class="col-xl-4 col-md-6 col-12 fl-item2 rtl">
+                            <div class="blog-box">
+                                <div class="blog-img">
+                                        <img src="{{post.photo.url}}" alt="Monteno">
+                                </div>
+                                <div class="blog-content rtl">
+                                    
+                                    <ul class="meta">
+                                        <li><a href="{% url 'post_detail' post.pk %}"><i class="fa fa-folder-open"></i>{{post.title}}</a><p><i class="fa fa-clock"></i> {{post.date}}</p></li>
+                                    </ul>
+                                    <a href="{% url 'post_detail' post.pk %}" class="title h6">{{post.exerpt}}</a>
+                                    {% comment %} <p class="title h6">{{post.body}}</p> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="col-12">
+                        <div class="load-more center">
+                            <a id="loadmore" class="btn-action" href="#">
+                                مشاهده بیشتر
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Blog grid -->
+        <section class="like-comment">
+            <nav>
+                <div class="cont">
+                    <div class="nav-content">
+                            <div class="search-container">
+                                    <a href="#"><i class="fas fa-comment"></i></a>
+        
+                            </div>
+        
+                        <div class="search-container">
+        
+                                <a href="#"><i class="fas fa-search"></i></a>
+        
+                        </div>
+        
+                        <div class="search-container">
+                                <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+        
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </div>
+                </div>
+            </nav>
+        </section>
+{% endblock content %}

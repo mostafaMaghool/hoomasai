@@ -1,0 +1,108 @@
+{% load static %}
+
+<div class="side-bar">
+    <div class="side-bar__box">
+        <h6 class="title">جستجو</h6>
+        <div class="input-group">
+            <div class="form-outline rtl">
+                <input type="search" id="form1" class="form-control" placeholder="تایپ کنید" required />
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+          </div>
+    </div>
+    <div class="side-bar__box">
+        <h6 class="title">پست های اخیر</h6>
+        {% if recent_posts %}
+        <ul class="recent rtl">
+            {% for post in recent_posts %}
+                <li>
+                    <a href="blog-single.html">
+                        <img src="{% static 'assets/images/blog/blog-04.jpg'%}" alt="Monteno">
+                    </a>
+                    <div class="info">
+                        <a href="{% url 'post_detail' post.pk %}" class="fs-18">{{post.title}}</a>
+                        <p class="fs-14">{{post.date}}</p>
+                    </div>
+                </li>
+                {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p> not found ... </p>
+    {% endif %}
+        </ul>
+    </div>
+    <div class="side-bar__box">
+        <h6 class="title">دسته بندی ها</h6>
+        <ul class="category rtl">
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>ارز دیجیتال</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>بلاک چین</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>بیت کوین</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>اتریوم</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>NFT بازار</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>فروش</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>تجارت آنلاین</a></li>
+            <li><a class="fs-18" href="#"><i class="fas fa-caret-right"></i>تجارت کریپتو</a></li>
+        </ul>
+    </div>
+    <div class="side-bar__box rtl">
+        <h6 class="title">برچسب ها</h6>
+        <ul class="tag">
+            <li><a class="fs-18" href="#">ارز</a></li>
+            <li><a class="fs-18" href="#">بلاکچین</a></li>
+            <li><a class="fs-18" href="#">NFT</a></li>
+            <li><a class="fs-18" href="#">اتریوم</a></li>
+            <li><a class="fs-18" href="#">Ico</a></li>
+            <li><a class="fs-18" href="#">بازار</a></li>
+            <li><a class="fs-18" href="#">Bitcoin</a></li>
+            <li><a class="fs-18" href="#">NFT تجارت</a></li>
+            <li><a class="fs-18" href="#">رسانه ها</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+</div>
+<div class="side-bar__box">
+    <h6 class="title">پست های اخیر</h6>
+    {% if recent_posts %}
+        <ul class="recent rtl">
+            {% for post in recent_posts %}
+                <li>
+                    <a href="blog-single.html">
+                        <img src="{% static 'assets/images/blog/blog-04.jpg'%}" alt="Monteno">
+                    </a>
+                    <div class="info">
+                        <a href="{% url 'post_detail' post.pk %}" class="fs-18">{{post.title}}</a>
+                        <p class="fs-14">{{post.date}}</p>
+                    </div>
+                </li>
+                {% endfor %}
+        </ul>
+    
+    {% else %}
+        <p> not found ... </p>
+    {% endif %}
+</div>
+<div class="side-bar__box">
+    <h6 class="title">پست های اخیر</h6>
+    {% if recent_posts %}
+        <ul class="recent rtl">
+            {% for post in recent_posts %}
+                <li>
+                    <a href="blog-single.html">
+                        <img src="{% static 'assets/images/blog/blog-04.jpg'%}" alt="Monteno">
+                    </a>
+                    <div class="info">
+                        <a href="{% url 'post_detail' post.pk %}" class="fs-18">{{post.title}}</a>
+                        <p class="fs-14">{{post.date}}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> not found ... </p>
+    {% endif %}
+    </ul>
+</div>
