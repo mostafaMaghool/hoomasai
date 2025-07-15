@@ -3,3 +3,11 @@
     "settingsFile": "config/settings.py"
   }
 }
+{
+    "disks":[
+        {
+            "name": "database",
+            "mountTo": "database"
+        }
+    ]
+}
