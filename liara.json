@@ -1,5 +1,5 @@
 {
   "django": {
-    "settingsFile": ".config/settings.py"
+    "settingsFile": "config/settings.py"
   }
 }
