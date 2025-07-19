@@ -4,10 +4,15 @@
   }
 }
 {
-    "disks":[
-        {
-            "name": "sqlite",
-            "mountTo": "media"
-        }
-    ]
+  "app": "hoomasai",
+  "port": 80,
+  "build": {
+    "location": "iran"
+  },
+  "disks": [
+    {
+      "name": "sqlite",
+      "mountTo": "media"
+    }
+  ]
 }
