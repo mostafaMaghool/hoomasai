@@ -7,7 +7,7 @@
     "disks":[
         {
             "name": "sqlite",
-            "mountTo": "database"
+            "mountTo": "media"
         }
     ]
 }
